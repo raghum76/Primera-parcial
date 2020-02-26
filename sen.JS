@@ -21,4 +21,4 @@ function fsin(x,n){
     return suma;
 }
 
-console.log(fcos(3,15));
+console.log(fsin(3,15));
