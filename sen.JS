@@ -5,7 +5,7 @@ function factorial(numero){
         factorial*=i;
     return factorial;
 }
-function fcos(x,n){
+function fsin(x,n){
     var num=0;
     var signo=-1;
     var suma=x;
