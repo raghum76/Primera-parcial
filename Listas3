@@ -1,0 +1,112 @@
+class Alumno{
+    constructor(nombre,edad,numControl,sexo,materias,calificacion,siguiente){
+      this.nombre=null;
+      this.nombre=null;
+      this.numControl=null;
+      this.sexo=null;
+      this.siguiente=null; 
+      this.materias=null;
+      this.calificacion=null;
+    }
+  }
+  class ListasEnlazadasSimples{
+    constructor(){
+      this.head=null;
+    }
+    agregar(nombre,numControl,sexo,calificacion){
+      if(this.head==null){
+        this.head = new Alumno();
+        this.inicio.nombre= nombre;
+        this.inicio.edad=edad;
+        this.inicio.numControl=numControl;
+        this.inicio.sexo=sexo;
+        this.inicio.calificacion=calificacion;
+
+        this.inicio.siguiente=null;
+        this.ultimo=this.inicio;
+        this.TotalNodos++;
+      else{
+        let temporal=this.head;
+        while(temporal.siguiente!=null)
+          temporal=temporal.siguiente;
+        temporal.siguiente=nuevo;
+      }
+    }
+  }
+   
+    mostrar(){
+      let resultado="";
+      let temp=this.head;
+      while(temp!=null){
+        resultado += temp.mostrar() + " , ";
+        temp=temp.siguiente;
+      }
+      return resultado;
+    }
+    console.log(resultado);
+    promedio(){
+      let suma=0;
+      for(let i=0;i<5;i++)
+          suma+=calificaciones[i];//deberia de dar el promedio de calificaicon de cada alumno,nombre y promedio(no se hacerlo)
+      return suma/5;
+  }
+
+    calificacion(){
+      for(i=0;i<total;i++){
+        if(promedios[i]>mayor){
+            mayor=promedios[i];//encuentra el alumno de mayor promedio(no se poner su nombre)
+        }
+        return mayor;
+    }
+    
+    for(i=0;i<total;i++){
+        if(sexo==0){
+            suma2+=calificaciones[1];//calificacion de materia 2 de las mujeres
+            m++;
+        }
+        return suma2/m; //promedio de materia 2 de las mujeres
+        else{
+            suma3+=calificaciones[1];//calificiacion de materia 2 de los hombres
+            h++;
+        }
+        return suma3/h; //promedio de materia 2 de los hombres
+    }
+    
+    for(i=0;i<total;i++){
+        if(calificaciones[1]>mayor2){
+            mayor2=calificaciones[1]; //mayor alumno en la materia 2(no se como poner su nombre)
+        }
+    }
+      
+  
+  }
+
+}
+  //llenar datos
+let lis= new ListaEnlazadaSimple();
+var calificacion=new Array(5);
+var promedios=new Array(5);
+var materias=['MAT_1','MAT_2','MAT_3','MAT_4','MAT_5'];
+var suma=0;
+var suma1=0;
+var total=5;
+var mayor=0;
+var mayor2=0;
+var suma=0;
+var suma2=0;
+var suma3=0;
+var h=0;
+var m=0;
+for(i=0;i<total;i++){
+
+let nombre=String.fromCharCode(65+Math.floor(Math.random()*25))+String.fromCharCode(65+Math.floor(Math.random()*24))+String.fromCharCode(65+Math.floor(Math.random()*25));
+let numControl=Math.floor(Math.random()*2000);
+let sexo=Math.floor(Math.random()*2);
+let edad=16+Math.floor(Math.random()*4);
+
+  for(j=0;j<total;j++){
+    calificaciones[j]=Math.floor(1+Math.random()*10);
+  }
+  lis.agregar(nombre,edad,numControl,sexo,calificacion(5),siguiente);
+
+}
