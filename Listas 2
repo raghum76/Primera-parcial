@@ -1,0 +1,103 @@
+class Alumno{
+    constructor(){
+      this.nombre="";
+      this.numControl=0;
+      this.sexo=0;
+      this.siguiente=null; 
+      this.materias=['MAT_1','MAT_2','MAT_3','MAT_4','MAT_5'];
+      this.calificaciones=new Array(5);
+    }
+    mostrar(){
+      return "Nombre: " + this.nombre + " Edad: " + 
+      this.edad + "Con numero de control: " + this.numControl;
+    }
+    calificacion(){
+      for(i=0;i<total;i++){
+        if(promedios[i]>mayor){
+            mayor=promedios[i];
+        }
+    }
+    
+    for(i=0;i<total;i++){
+        if(sexo==0){
+            suma2+=calificaciones[1];
+            m++;
+        }
+        else{
+            suma3+=calificaciones[1];
+            h++;
+        }
+    }
+    
+    for(i=0;i<total;i++){
+        if(calificaciones[1]>mayor2){
+            mayor2=calificaciones[1];
+        }
+    }
+      
+    }
+  
+  class ListasEnlazadasSimples{
+    constructor(){
+      this.head=null;
+    }
+    agregar(nombre,numControl,sexo,calificacion){
+      if(this.head===null)
+        this.head = new Alumno();
+        this.inicio.nombre= nombre;
+        this.inicio.numControl=numControl;
+        this.inicio.sexo=sexo;
+        this.inicio.calificacion=calificacion;
+
+        this.inicio.siguiente=null;
+        this.ultimo=this.inicio;
+        this.TotalNodos++;
+      else{
+        let temporal=this.head;
+        while(temporal.siguiente!=null)
+          temporal=temporal.siguiente;
+        temporal.siguiente=nuevo;
+      }
+    }
+   
+    mostrar(){
+      let resultado="";
+      let temp=this.head;
+      while(temp!=null){
+        resultado += temp.mostrar() + " , ";
+        temp=temp.siguiente;
+      }
+      return resultado;
+    }
+    console.log(resultado);
+  
+  }
+
+  //llenar datos
+let lis= new ListaEnlazadaSimple();
+var calificacion=new Array(5);
+var promedios=new Array(5);
+var suma=0;
+var suma1=0;
+var total=5;
+var mayor=0;
+var mayor2=0;
+var suma=0;
+var suma2=0;
+var suma3=0;
+var h=0;
+var m=0;
+for(i=0;i<total;i++){
+
+let nombre=String.fromCharCode(65+Math.floor(Math.random()*25))+String.fromCharCode(65+Math.floor(Math.random()*24))+String.fromCharCode(65+Math.floor(Math.random()*25));
+let numControl=Math.floor(Math.random()*2000);
+let sexo=Math.floor(Math.random()*2);
+
+  for(j=0;j<total;j++){
+    calificaciones[j]=Math.floor(1+Math.random()*10);
+    suma+=calificaciones[j];
+  }
+  promedios[i]=suma/5;
+  lis.agregar(nombre,numControl,sexo,calificaciones(5));
+
+}
