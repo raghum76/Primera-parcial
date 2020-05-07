@@ -1,0 +1,234 @@
+class Alumno{
+    constructor(nombre,numControl,sexo,materias,calificacion,siguiente){
+      this.nombre=" ";
+      this.numControl=0;
+      this.sexo=0;
+      this.siguiente=null; 
+      this.materias=0;
+      this.calificaciones=0;
+    }
+  }
+  class ListasEnlazadasSimples{
+    constructor(){
+      this.inicio=null;
+    }
+    agregar(nombre,numControl,sexo,calificaciones){
+      if(this.inicio==null){
+
+        this.inicio= new Alumno();
+
+        this.inicio.nombre= nombre;
+        this.inicio.edad=edad;
+        this.inicio.numControl=numControl;
+        this.inicio.sexo=sexo;
+        this.inicio.calificaciones= new Array(5);
+        this.inicio.materias=['MAT_1','MAT_2','MAT_3','MAT_4','MAT_5'];
+
+        for(j=0;j<5;j++){
+          this.inicio.calificacion[j]= Math.floor(1+Math.random()*10);
+        }
+
+        this.inicio.siguiente=null;
+        this.ultimo=this.inicio;
+        this.TotalNodos++;
+      else{
+        var tmp= new Alumno();
+        this.inicio.nombre= nombre;
+        this.inicio.edad=edad;
+        this.inicio.numControl=numControl;
+        this.inicio.sexo=sexo;
+        this.inicio.calificacion= new Array(5);
+        this.inicio.materias=['MAT_1','MAT_2','MAT_3','MAT_4','MAT_5'];
+
+        for(j=0;j<5;j++){
+          this.inicio.calificacion[j]= Math.floor(1+Math.random()*10);
+        }
+        this.inicio.siguiente=null;
+        this.ultimo.siguiente=tmp;
+        this.ultimo=tmp;
+        this.TotalNodos++;
+
+       
+      }
+    }
+    mostrar1(){
+      var tmp=this.inicio;
+
+      while(tmp!=null){
+        console.log(promedioalumno());
+        console.log(nomMayorpromedio());
+        console.log(respuestaincisoc());
+        console.log(nomMayormat2());
+      }
+      tmp=tmp.siguiente;
+    }
+   
+    mostrar(){
+      let resultado="";
+      let tmp=this.inicio
+      while(tmp!=null){
+        resultado += temp.mostrar1() + " , ";
+        tmp=tmp.siguiente;
+      }
+      return resultado;
+    }
+  }
+    promedioalumno(){
+      var tmp=this.inicio;
+      var txt=" ";
+      var numControl=0;
+      var prom=0;
+      var suma_calificaciones=0;
+
+      while(tmp!=null){
+
+        console.log(temp.numControl,tmp.nombre);
+        suma_calificaciones=tmp.calificaciones[j];
+    }
+    prom=suma_calificaciones/5;
+    txt+=prom;
+    tmp=tmp.siguiente;
+  }
+  return txt;
+  
+    }
+    nomMayorpromedio(){
+      var tmp=this.inicio;
+      var txt=" ";
+      var numControl=0;
+      var promedio_Mayor=0;
+      var prom=0;
+      var suma_calificaciones=0;
+
+      while(tmp!=null){
+
+        console.log(temp.numControl,tmp.nombre);
+        suma_calificaciones+=tmp.calificaciones[j];
+        txt+=tmp.calificaciones[j] + " , ";
+      }
+      prom=suma_calificaciones/5;
+      txt+=prom;
+      console.log(txt);
+      if(prom>promedio_Mayor){
+        promedio_Mayor=prom;
+      }
+      tmp=tmp.siguiente;
+      
+    }
+    var tmp=this.inicio;
+    var prom=0;
+    var suma_calificaciones=0;
+
+    console.log("El promeido mayor es: ",promedio_Mayor);
+    while(tmp!=null){
+      suma_calificaciones=0;
+      txt= " ";
+      for(j=0;j<5;j++){
+        suma_calificaciones+= tmp.calificaciones[j];
+        txt+=tmp.calificaciones[j] + ",";
+      }
+      prom=suma_calificaciones/5
+    }
+    if(prom==promedio_Mayor){
+      console.log("PROMEIDO MAYOR");
+      console.log(tmp.numControl,tmp.nombre);
+      console.log(txt);
+    }
+    txt+=prom;
+      
+  }
+
+    }
+}
+promat2m(){
+  var tmp = this.inicio;
+  var txt ="";
+  var suma_calificiones = 0;
+  var m=0;
+  var promedio=0;
+
+
+  while (tmp != null)
+  {
+      if (tmp.sexo ==0 )
+      {
+          suma_calificiones+= tmp.calificaciones[1];
+           m++;
+           promedio=suma_calificaciones/m;
+      }
+      tmp=tmp.siguiente;
+}
+return promedio;
+}
+promat2h(){
+  var tmp = this.inicio;
+  var txt ="";
+  var suma_calificiones = 0;
+  var h=0;
+  var promedio=0;
+
+  while (tmp != null)
+  {
+      if (tmp.sexo ==1 )
+      {
+          suma_calificiones+= tmp.calificaciones[1];
+           h++;
+           promedio=suma_calificaciones/h;
+      }
+      tmp=tmp.siguiente;
+}
+return promedio;
+}
+respuestaincisoc(){
+  var txt=" ";
+  txt+="\nMujeres: " + this.promat2m() + "\nHombres: " + this.promat2h();
+  return txt;
+}
+Mayormat2(){
+  var tmp=this.inicio;
+      var mayor=0;
+
+
+      while(tmp!=null){
+      for(i=0;i<5;i++){
+        if(tmp.calificaciones[1]>mayor){
+          mayor=tmp.calificaciones[1];
+        }
+  
+        tmp=tmp.siguiente;
+      }
+nomMayormat2(){
+  var tmp=this.inicio;
+  while(tmp!=null){
+    for(i=0;i<5;i++){
+      if(tmp.calificaciones[1]==Mayormat2()){
+        console.log("el alumno con mayor calificacion en mat2 es: "+ tmp.nombre)//tengo duda en si si me da el nombre dle mayor de mat2
+      }
+      tmp=tmp.siguiente;
+    }
+  }
+}      
+
+
+      }
+
+}
+}
+  //llenar datos
+let lis= new ListaEnlazadaSimple();
+var calificaciones=new Array(5);
+
+
+for(i=0;i<total;i++){
+
+
+var nombre=String.fromCharCode(65+Math.floor(Math.random()*25))+String.fromCharCode(65+Math.floor(Math.random()*24))+String.fromCharCode(65+Math.floor(Math.random()*25));
+var numControl=Math.floor(Math.random()*2000);
+var sexo=Math.floor(Math.random()*2);
+
+  for(j=0;j<total;j++){
+    calificaciones[j]=Math.floor(1+Math.random()*10);
+  }
+  lis.agregar(nombre,numControl,sexo,calificaciones);
+
+}
