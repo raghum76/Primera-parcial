@@ -43,7 +43,7 @@ class Alumno{
         for(j=0;j<5;j++){
           this.inicio.calificacion[j]= Math.floor(1+Math.random()*10);
         }
-        this.inicio.siguiente=null;
+        //this.inicio.siguiente=null;//si haces esto, estarias quitando siempre el segundo elemento
         this.ultimo.siguiente=tmp;
         this.ultimo=tmp;
         this.TotalNodos++;
@@ -79,7 +79,7 @@ class Alumno{
       var numControl=0;
       var prom=0;
       var suma_calificaciones=0;
-
+        //esto debería estar en un ciclo para que la j cambie de 0 a 4 por que son las calificaciones que tienes
       while(tmp!=null){
 
         console.log(temp.numControl,tmp.nombre);
@@ -190,7 +190,7 @@ Mayormat2(){
 
 
       while(tmp!=null){
-      for(i=0;i<5;i++){
+      for(i=0;i<5;i++){  //aqui no se ocupa el ciclo porque es justamente el subindice 1
         if(tmp.calificaciones[1]>mayor){
           mayor=tmp.calificaciones[1];
         }
@@ -203,7 +203,7 @@ nomMayormat2(){
     for(i=0;i<5;i++){
       if(tmp.calificaciones[1]==Mayormat2()){
         console.log("el alumno con mayor calificacion en mat2 es: "+ tmp.nombre)//tengo duda en si si me da el nombre dle mayor de mat2
-      }
+      }     //si esta bien, pero cada vez vuelves a ir a generar el mayor de mat2
       tmp=tmp.siguiente;
     }
   }
